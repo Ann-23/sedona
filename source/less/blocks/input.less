@@ -1,0 +1,139 @@
+.input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input--full-name {
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.input__label {
+  margin-right: 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: @grey-str;
+}
+
+.input__label--contacts {
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+.input__control {
+  box-sizing: border-box;
+  min-height: 50px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  padding: 16px 21px;
+  font-size: 18px;
+  font-weight: 700;
+  color: @black;
+  background-color: @grey-mid-2;
+  border: 4px solid @grey-mid-2;
+
+  &:hover {
+    background-color: @grey-mid-6;
+    border: 4px solid @grey-mid-6;
+  }
+
+  &:active,
+  &:focus {
+    background-color: @white;
+    border: 4px solid @grey-mid-6;
+  }
+
+  &::placeholder {
+    color: @black-30;
+  }
+}
+
+.input__control--name {
+  min-width: 230px;
+}
+
+.input__control--surname {
+  min-width: 192px;
+}
+
+.input__control--patronymic {
+  min-width: 194px;
+}
+
+.input__control--contacts {
+  margin-top: 10px;
+  padding: 16px 21px;
+  padding-right: 63px;
+}
+
+.input--contacts {
+  position: relative;
+  flex-direction: column;
+}
+
+.input--contacts::after {
+  content: "";
+  position: absolute;
+  top: 37px;
+  right: 0;
+  z-index: 1;
+  width: 58px;
+  height: 58px;
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: @grey-mid-5;
+}
+
+.input--contacts:nth-child(2)::after {
+  background-image: url("../img/icon-mail.svg");
+}
+
+.input__control:invalid {
+  outline: 2px solid red;
+}
+
+.input__control--red {
+  outline: 2px solid red;
+}
+
+@media (min-width: @tablet-width) {
+  .input__control {
+    flex-grow: 1;
+    min-width: 183px;
+  }
+
+  .input__control--contacts {
+    margin-top: 10px;
+    margin-bottom: 17px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .input--contacts {
+    flex-direction: row;
+    align-items: center;
+    width: 400px;
+  }
+
+  .input--contacts:nth-child(2) {
+    width: 480px;
+  }
+
+  .input__label--contacts {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+
+  .input__label-part {
+    display: none;
+  }
+
+  .input--contacts::after,
+  .input--contacts:nth-child(2)::after {
+    top: 11px;
+    right: 0;
+  }
+}

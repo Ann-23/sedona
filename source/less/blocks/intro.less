@@ -1,0 +1,18 @@
+.intro__reasons {
+  background-color: @grey;
+}
+
+@media (min-width: @tablet-width) {
+  .intro {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .intro__reasons {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    order: 6;
+  }
+}

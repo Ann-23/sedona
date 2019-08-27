@@ -1,0 +1,52 @@
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 180px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social__button {
+  position: relative;
+  display: block;
+  width: 48px;
+  height: 48px;
+  background-color: @blue;
+
+  &:hover,
+  &:focus {
+    background-color: @blue-dark-2;
+  }
+
+  &:active {
+    background-color: @blue-dark-3;
+  }
+}
+
+.social__button-item {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  fill: @white;
+  width: 18px;
+  height: auto;
+
+  &:active {
+    fill: @blue-mid-1;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    width: 177px;
+    margin-right: 9px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .social {
+    margin-right: 0;
+  }
+}

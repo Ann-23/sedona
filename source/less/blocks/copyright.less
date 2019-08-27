@@ -1,0 +1,31 @@
+.copyright {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 130px;
+}
+
+.copyright__text {
+  margin: 0;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  color: @black;
+  text-transform: uppercase;
+}
+
+.copyright__link {
+  display: inline-block;
+}
+
+.copyright__link-icon {
+  &:hover,
+  &:focus {
+    fill: @blue;
+  }
+
+  &:active {
+    fill: @grey-mid-4;
+  }
+}

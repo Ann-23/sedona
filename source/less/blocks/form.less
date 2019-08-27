@@ -1,0 +1,266 @@
+.form {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.form__full-name,
+.form__contacts,
+.form__radio,
+.form__checkbox,
+.form__textarea {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-top: 1px solid @grey-mid;
+}
+
+.form__full-name,
+.form__contacts {
+  padding-bottom: 12px;
+}
+
+.form__radio,
+.form__checkbox {
+  padding-bottom: 43px;
+}
+
+.form__title {
+  margin: 0;
+  padding-bottom: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  color: @black;
+}
+
+.form__title--radio {
+  padding-bottom: 33px;
+}
+
+.form__title--visited {
+  padding-bottom: 28px;
+}
+
+.form__text {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 648px;
+  }
+
+  .form__full-name,
+  .form__contacts,
+  .form__radio,
+  .form__checkbox,
+  .form__textarea {
+    box-sizing: border-box;
+    padding-left: 0;
+    padding-right: 0;
+    border-top: none;
+  }
+
+  .form__radio,
+  .form__full-name {
+    padding-top: 4px;
+    width: 324px;
+  }
+
+  .form__radio {
+    order: 1;
+  }
+
+  .form__full-name {
+    position: relative;
+    padding-left: 55px;
+    order: 2;
+  }
+
+  .form__full-name::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 1px;
+    height: 291px;
+    background-color: @grey-mid-3;
+  }
+
+  .form__contacts {
+    padding-top: 43px;
+    order: 3;
+    width: 100%;
+  }
+
+  .form__checkbox {
+    order: 4;
+    padding-top: 22px;
+    width: 100%;
+  }
+
+  .form__textarea {
+    order: 5;
+    padding-top: 41px;
+    width: 100%;
+  }
+
+  .form__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    order: 6;
+    padding-top: 26px;
+    padding-bottom: 58px;
+    width: 100%;
+  }
+
+  .form__title {
+    position: relative;
+    padding-bottom: 54px;
+    padding-left: 170px;
+    padding-right: 170px;
+    font-size: 21px;
+  }
+
+  .form__title::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 125px;
+    height: 1px;
+    background-color: @grey-mid-3;
+  }
+
+  .form__title::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 0;
+    width: 125px;
+    height: 1px;
+    background-color: @grey-mid-3;
+  }
+
+  .form__title--radio,
+  .form__title--full-name {
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .form__title--radio {
+    padding-bottom: 73px;
+  }
+
+  .form__title--radio::before,
+  .form__title--full-name::before,
+  .form__title--radio::after,
+  .form__title--full-name::after {
+    display: none;
+  }
+
+  .form__title--contacts {
+    padding-bottom: 22px;
+  }
+
+  .form__title--visited {
+    padding-bottom: 58px;
+  }
+
+  .form__title--visited::before,
+  .form__title--visited::after {
+    top: 26px;
+  }
+
+  .form__item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 465px;
+  }
+
+  .form__text {
+    display: block;
+    margin: 0;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 960px;
+  }
+
+  .form__radio,
+  .form__full-name {
+    width: 400px;
+  }
+
+  .form__full-name {
+    padding-left: 0;
+  }
+
+  .form__contacts {
+    padding-top: 39px;
+  }
+
+  .form__full-name::before {
+    left: -80px;
+  }
+
+  .form__title {
+    padding-left: 320px;
+    padding-right: 320px;
+  }
+
+  .form__title--radio,
+  .form__title--full-name {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .form__title::before,
+  .form__title::after {
+    width: 280px;
+  }
+
+  .form__title--radio {
+    padding-left: 80px;
+  }
+
+  .form__title--contacts {
+    padding-top: 0;
+    padding-bottom: 62px;
+  }
+
+  .form__item {
+    margin: 0;
+    max-width: 960px;
+  }
+
+  .form__input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

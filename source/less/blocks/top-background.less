@@ -1,0 +1,88 @@
+.top-background {
+  min-height: 389px;
+  width: 100%;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-color: @main-color;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+    background-position: center top;
+    background-size: 240% 100%;
+  }
+}
+
+.top-background--sec {
+  min-height: 158px;
+  background-position: center bottom;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-size: 240% 240%;
+  }
+}
+
+.top-background__text {
+  display: block;
+  margin: 0 auto;
+  padding-top: 89px;
+  width: 280px;
+  height: auto;
+}
+
+.top-background__text--sec {
+  padding-top: 52px;
+  width: 230px;
+}
+
+@media (min-width: @tablet-width) {
+  .top-background {
+    min-height: 518px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background-position: center top;
+      background-size: 768px 518px;
+    }
+  }
+
+  .top-background--sec {
+    min-height: 290px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-position: center bottom;
+      background-size: 100% 180%;
+    }
+  }
+
+  .top-background__text {
+    padding-top: 77px;
+    width: 460px;
+  }
+
+  .top-background__text--sec {
+    padding-top: 94px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .top-background {
+    min-height: 518px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-position: center;
+      background-size: 1200px 518px;
+    }
+  }
+
+  .top-background--sec {
+    min-height: 305px;
+  }
+
+  .top-background__text--sec {
+    padding-top: 101px;
+  }
+}

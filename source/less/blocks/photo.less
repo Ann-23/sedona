@@ -1,0 +1,134 @@
+.photo {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 22px;
+  border-top: 1px solid @grey-mid;
+}
+
+.photo:last-child {
+  border-bottom: 1px solid @grey-mid;
+}
+
+.photo__link {
+  display: block;
+  background-color: @main-color;
+}
+
+.photo__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.photo__comment {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-top: 16px;
+  padding-bottom: 17px;
+}
+
+.photo__name {
+  margin: 0;
+  padding-bottom: 0;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.photo__text {
+  margin: 0;
+  padding-bottom: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.photo__value {
+  display: flex;
+  flex-direction: row;
+  margin-top: 7px;
+}
+
+.photo__likes {
+  flex-grow: 1;
+  position: relative;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.photo__icon {
+  order: -1;
+  width: 27px;
+  height: 20px;
+  margin-right: 10px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.photo__like {
+  fill: @grey-mid-4;
+}
+
+@media (min-width: @tablet-width) {
+  .photo {
+    padding: 0;
+    width: 324px;
+    border: none;
+  }
+
+  .photo:last-child {
+    border: none;
+  }
+
+  .photo--top {
+    width: 648px;
+  }
+
+  .photo__comment {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: 80px;
+    background-color: @grey-mid-2;
+  }
+
+  .photo__name {
+    padding-bottom: 0;
+  }
+
+  .photo__value {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo {
+    position: relative;
+    width: 400px;
+  }
+
+  .photo--top {
+    width: 1200px;
+  }
+
+  .photo__comment {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    width: 100%;
+    color: @white;
+    background-color: transparent;
+  }
+
+  .photo__like {
+    fill: @white;
+  }
+}

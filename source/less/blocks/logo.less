@@ -1,0 +1,42 @@
+.logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.logo__item--tab {
+  display: none;
+}
+
+.logo__item--desktop {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .logo__item--mobile {
+    display: none;
+  }
+
+  .logo__item--tab {
+    display: block;
+  }
+
+  .logo__item--desktop {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .logo__item--mobile {
+    display: none;
+  }
+
+  .logo__item--tab {
+    display: none;
+  }
+
+  .logo__item--desktop {
+    display: block;
+  }
+}

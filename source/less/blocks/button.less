@@ -1,0 +1,74 @@
+.button {
+  display: block;
+  box-sizing: border-box;
+  width: 280px;
+  margin: 0 auto;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  padding: 16px;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  color: @sec-color;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  background-color: @main-color;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: @blue-dark-2;
+  }
+
+  &:active {
+    color: @white-30;
+    background-color: @blue-dark-3;
+  }
+}
+
+.button--close {
+  margin: 0;
+}
+
+.button--sent {
+  margin-top: 18px;
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    width: 460px;
+  }
+
+  .button--sent {
+    margin: 0;
+    width: 324px;
+  }
+
+  .button--ok {
+    margin: 0;
+    width: 280px;
+  }
+
+  .button--close {
+    margin: 0 auto;
+  }
+
+  .button--find {
+    margin: 39px auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .button--sent {
+    width: 480px;
+  }
+
+  .button--ok {
+    margin: 0 auto;
+  }
+
+  .button--find {
+    margin: 45px auto;
+  }
+}
